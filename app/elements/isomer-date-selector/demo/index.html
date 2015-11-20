@@ -22,9 +22,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <button id="getDate">get selected date</button>
 
-    <isomer-date-selector bind-value="">
-      <h2>Hello isomer-date-selector</h2>
+    <isomer-date-selector bind-value="" days-back="7">
     </isomer-date-selector>
+
+<!--
+  multiple of these in one page still break
+    <isomer-date-selector bind-value="" days-back="5">
+    </isomer-date-selector>
+
+    <isomer-date-selector bind-value="" days-back="10">
+    </isomer-date-selector>
+-->
 
     <script>
       var seedElement = document.querySelector('isomer-date-selector');
