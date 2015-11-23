@@ -40,7 +40,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.querySelector('#getDate').addEventListener('click', function() {
         alert(seedElement.getValue());
       });
-      
+      document.querySelector("isomer-date-selector").addEventListener("date-selected",function(){
+         alert("selected date: " + document.querySelector('isomer-date-selector').getValue());
+      });
 
     </script>
 

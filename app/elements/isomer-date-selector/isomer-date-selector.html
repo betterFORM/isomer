@@ -89,6 +89,7 @@ Example:
                 padding: 10px;
                 color: white;
                 background: #3F51B5;
+                transition: 0.5s ease;
             }
 
             .arrow a {
@@ -118,7 +119,7 @@ Example:
             }
         </style>
 
-        <div class="wrapper">
+        <div class="wrapper" tabindex="0">
             <table>
                 <tr>
                     <td class="arrow back"><a href="#"><i class="fa fa-angle-left"></i></a></td>
@@ -241,6 +242,7 @@ Example:
                     $(this).attr("selected", "selected");
                     self.bindValue = self.days[$(this).attr('index')].moment.format('YYYY-MM-DD');
                     console.log("selected date: ", $(this).attr("datevalue"));
+                    self.fire('date-selected');
                 });
 
                 $(this).find('.arrow.back').on("click", function () {
